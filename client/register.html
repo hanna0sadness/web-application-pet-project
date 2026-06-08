@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    
+    <div class="
+        bg-white 
+        p-6 md:p-8 
+        rounded-2xl 
+        shadow-md 
+        w-full 
+        max-w-sm
+    ">
+        <h1 class="text-lg md:text-xl font-bold mb-4 text-center">
+            Реєстрація
+        </h1>
+
+        <form id="registerForm" class="space-y-4">
+
+            <input
+                type="text"
+                id="username"
+                class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="Ім'я"
+            >
+
+            <input
+                type="email"
+                id="email"
+                class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="Пароль"
+            >
+
+            <button
+                type="submit"
+                class="
+                    w-full
+                    bg-green-500
+                    text-white
+                    py-2
+                    rounded
+                    hover:bg-green-600
+                    active:scale-95
+                    transition
+                ">
+                    Зареєструватися
+            </button>
+        </form>
+
+        <p class="text-sm text-center mt-4">
+            Вже є акаунт?
+            <a href="login.html" class="text-blue-500 hover:underline">
+                Увійти
+            </a>
+        </p>
+
+    </div>
+    
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
