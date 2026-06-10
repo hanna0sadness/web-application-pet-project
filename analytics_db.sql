@@ -33,7 +33,7 @@ CREATE TABLE `analysis_results` (
   `analysis_type` varchar(50) NOT NULL,
   `result_data` json DEFAULT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп даних таблиці `analysis_results`
@@ -61,7 +61,7 @@ CREATE TABLE `datasets` (
   `column_count` int DEFAULT '0',
   `upload_date` datetime DEFAULT CURRENT_TIMESTAMP,
   `status` enum('uploaded','processing','ready','error') DEFAULT 'uploaded'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп даних таблиці `datasets`
@@ -85,16 +85,16 @@ CREATE TABLE `users` (
   `password_hash` varchar(255) NOT NULL,
   `role` enum('user','admin') DEFAULT 'user',
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп даних таблиці `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password_hash`, `role`, `created_at`) VALUES
-(1, 'Віталій Семчишин', 'semcisin14@gmail.com', '$2b$10$tYqErHXcVnjKkwtagQoG.e4aD/9zxmV8QJ90CjjVX9.qDRL5nslPG', 'admin', '2026-04-13 11:23:44'),
-(2, 'Петро Паращак', 'parash@gmail.com', '$2b$10$TYfZxrm8zGLc4hJAu8UIS.o3lq7GwyStazziDs1ghA2fMaRlEujqa', 'user', '2026-04-15 20:54:39'),
-(3, 'Олександр Вітко', 'vitko@gmail.com', '$2b$10$Mf8hf8k3STDEBNWw0g7aqOzJDu6I9ScxKhUv8aeskpIlS.JcMLDIa', 'user', '2026-04-23 17:58:02');
+(1, 'Віталій', 'vetal14@gmail.com', '$2b$10$tYqErHXcVnjKkwtagQoG.e4aD/9zxmV8QJ90CjjVX9.qDRL5nslPG', 'user', '2026-04-13 11:23:44'),
+(2, 'Петро', 'petro@gmail.com', '$2b$10$TYfZxrm8zGLc4hJAu8UIS.o3lq7GwyStazziDs1ghA2fMaRlEujqa', 'user', '2026-04-15 20:54:39'),
+(3, 'Олександр', 'vitko@gmail.com', '$2b$10$Mf8hf8k3STDEBNWw0g7aqOzJDu6I9ScxKhUv8aeskpIlS.JcMLDIa', 'user', '2026-04-23 17:58:02');
 
 -- --------------------------------------------------------
 
@@ -106,10 +106,10 @@ CREATE TABLE `visualizations` (
   `id` int NOT NULL,
   `dataset_id` int NOT NULL,
   `viz_type` varchar(50) NOT NULL,
-  `column_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `column_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `config` json DEFAULT NULL,
   `image_path` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп даних таблиці `visualizations`
